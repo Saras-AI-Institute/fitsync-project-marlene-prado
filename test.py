@@ -1,3 +1,4 @@
-from modules.processor import load_data
+from modules.processor import load_data, calculate_recovery_score
 df = load_data()
-print(df.head(20))
+df = calculate_recovery_score(df)
+print(df[['Date','Sleep_Hours','Heart_Rate_bpm', 'Recovery_Score']].head(20))

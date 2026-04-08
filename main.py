@@ -2,7 +2,7 @@ import streamlit as st
 from modules.processor import process_data
 
 # Title
-st.title("FitSync Dashboard")
+st.title("FitSync Personal Health Analytics")
 
 # Layout
 col1, col2, col3 = st.columns(3)

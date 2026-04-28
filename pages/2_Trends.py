@@ -1,13 +1,18 @@
 import streamlit as st
+from streamlit import cache_data
 import plotly.express as px
 from modules.processor import process_data
+
+# Use st.cache_data to cache the data loading function
+@st.cache_data
+def get_data():
+    return process_data()
 
 # Title
 st.title("Trends & Insights")
 
 # Load data
-
-df = process_data()
+df = get_data()
 
 # Sidebar filters
 st.sidebar.header("Filters")

@@ -1,12 +1,18 @@
 import streamlit as st
+from streamlit import cache_data
 import plotly.express as px
 from modules.processor import process_data
+
+# Use st.cache_data to cache the data loading function
+@st.cache_data
+def get_data():
+    return process_data()
 
 # Title
 st.title("FitSync Personal Health Analytics")
 
 # Load and process data
-df = process_data()
+df = get_data()
 
 # Sidebar filters with time range options: Last 7 Days, Last 30 Days, All Time
 st.sidebar.header("Filters")
@@ -72,3 +78,4 @@ with chart_col4:
 # Display the filtered processed data
 st.write("## Processed Health Data")
 st.dataframe(filtered_df)
+

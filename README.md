@@ -22,6 +22,7 @@ FitSync is a state-of-the-art personal health analytics platform designed to pro
 
 ## 📂 Project Structure
 
+```
 fitsync/
 │── main.py # Entry point for Streamlit app
 │── pages/ # Multi-page app views
@@ -40,6 +41,7 @@ fitsync/
 │── sample_data.py # Sample dataset utilities
 │── test.py # Testing script
 │── README.md # Project documentation
+```
 
 ## How to Run
 1. **Clone the repository**: Use Git to clone the project to your local machine.
